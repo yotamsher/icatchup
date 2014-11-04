@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81636E161A0190BE00A48717 /* MyListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81636E151A0190BE00A48717 /* MyListTableViewController.m */; };
+		81636E191A03A54100A48717 /* MyTodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 81636E181A03A54100A48717 /* MyTodoItem.m */; };
 		817B617219FE3AB900CD29AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 817B617119FE3AB900CD29AD /* main.m */; };
 		817B617519FE3AB900CD29AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 817B617419FE3AB900CD29AD /* AppDelegate.m */; };
-		817B617819FE3AB900CD29AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817B617719FE3AB900CD29AD /* ViewController.m */; };
+		817B617819FE3AB900CD29AD /* AddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817B617719FE3AB900CD29AD /* AddItemViewController.m */; };
 		817B617B19FE3AB900CD29AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817B617919FE3AB900CD29AD /* Main.storyboard */; };
 		817B617D19FE3AB900CD29AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817B617C19FE3AB900CD29AD /* Images.xcassets */; };
 		817B618019FE3AB900CD29AD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817B617E19FE3AB900CD29AD /* LaunchScreen.xib */; };
@@ -27,13 +29,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81636E141A0190BE00A48717 /* MyListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyListTableViewController.h; sourceTree = "<group>"; };
+		81636E151A0190BE00A48717 /* MyListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyListTableViewController.m; sourceTree = "<group>"; };
+		81636E171A03A54100A48717 /* MyTodoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTodoItem.h; sourceTree = "<group>"; };
+		81636E181A03A54100A48717 /* MyTodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTodoItem.m; sourceTree = "<group>"; };
 		817B616C19FE3AB900CD29AD /* mytest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mytest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		817B617019FE3AB900CD29AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		817B617119FE3AB900CD29AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		817B617319FE3AB900CD29AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		817B617419FE3AB900CD29AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		817B617619FE3AB900CD29AD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		817B617719FE3AB900CD29AD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		817B617619FE3AB900CD29AD /* AddItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddItemViewController.h; sourceTree = "<group>"; };
+		817B617719FE3AB900CD29AD /* AddItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddItemViewController.m; sourceTree = "<group>"; };
 		817B617A19FE3AB900CD29AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		817B617C19FE3AB900CD29AD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		817B617F19FE3AB900CD29AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -83,12 +89,16 @@
 			children = (
 				817B617319FE3AB900CD29AD /* AppDelegate.h */,
 				817B617419FE3AB900CD29AD /* AppDelegate.m */,
-				817B617619FE3AB900CD29AD /* ViewController.h */,
-				817B617719FE3AB900CD29AD /* ViewController.m */,
+				817B617619FE3AB900CD29AD /* AddItemViewController.h */,
+				817B617719FE3AB900CD29AD /* AddItemViewController.m */,
 				817B617919FE3AB900CD29AD /* Main.storyboard */,
 				817B617C19FE3AB900CD29AD /* Images.xcassets */,
 				817B617E19FE3AB900CD29AD /* LaunchScreen.xib */,
 				817B616F19FE3AB900CD29AD /* Supporting Files */,
+				81636E141A0190BE00A48717 /* MyListTableViewController.h */,
+				81636E151A0190BE00A48717 /* MyListTableViewController.m */,
+				81636E171A03A54100A48717 /* MyTodoItem.h */,
+				81636E181A03A54100A48717 /* MyTodoItem.m */,
 			);
 			path = mytest1;
 			sourceTree = "<group>";
@@ -219,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				817B617819FE3AB900CD29AD /* ViewController.m in Sources */,
+				817B617819FE3AB900CD29AD /* AddItemViewController.m in Sources */,
 				817B617519FE3AB900CD29AD /* AppDelegate.m in Sources */,
+				81636E191A03A54100A48717 /* MyTodoItem.m in Sources */,
 				817B617219FE3AB900CD29AD /* main.m in Sources */,
+				81636E161A0190BE00A48717 /* MyListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = mytest1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -356,6 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = mytest1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -414,6 +428,7 @@
 				817B619119FE3AB900CD29AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		817B619219FE3AB900CD29AD /* Build configuration list for PBXNativeTarget "mytest1Tests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +437,7 @@
 				817B619419FE3AB900CD29AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
