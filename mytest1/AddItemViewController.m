@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
-- (IBAction)bringContatcs:(id)sender;
+- (IBAction)bringContacts:(id)sender;
 @end
 
 @implementation AddItemViewController
@@ -70,67 +70,114 @@
     }
 }
 
-- (IBAction)bringContatcs:(id)sender {
+- (IBAction)bringContacts:(id)sender {
     
     if([self check_contacts_permission])
     {
-        UIAlertView *contactExistsAlert = [[UIAlertView alloc]initWithTitle: @"going to bring contacts" message:@"please wait" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView *waitAlert = [[UIAlertView alloc]initWithTitle: @"going to bring contacts" message:@"please wait" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         
-        [contactExistsAlert show];
+        [waitAlert show];
         ABAddressBookRef addressBookRef = ABAddressBookCreateWithOptions(NULL, nil);
 
-        NSArray *allContacts = (__bridge NSArray *)ABAddressBookCopyArrayOfAllPeople(addressBookRef);
+        NSMutableArray *contactsArray = [[NSMutableArray alloc] init];
+        NSArray *allContacts = CFBridgingRelease( ABAddressBookCopyArrayOfAllPeople(addressBookRef) );
+        int j = 0;
+        NSMutableDictionary *phonesDictionary = [[NSMutableDictionary alloc] init];
+        NSMutableDictionary *emailsDictionary = [[NSMutableDictionary alloc] init];
         for (id record in allContacts){
+            j++;
+            [phonesDictionary removeAllObjects];
+            [emailsDictionary removeAllObjects];
             ABRecordRef thisContact = (__bridge ABRecordRef)record;
             NSString* name  = (__bridge_transfer NSString*) ABRecordCopyValue(thisContact, kABPersonFirstNameProperty);
-            
+            if(name == nil)
+            {
+                name=@"";
+            }
+            NSString* lastName  = (__bridge_transfer NSString*) ABRecordCopyValue(thisContact, kABPersonLastNameProperty);
+            if(lastName == nil)
+            {
+                lastName=@"";
+            }
+            NSNumber *contactId = [NSNumber numberWithInt: ABRecordGetRecordID ( thisContact )];
             NSLog(@"found person name: %@", name );
-            NSString* phone = nil;
             ABMultiValueRef phoneNumbers = ABRecordCopyValue(thisContact, kABPersonPhoneProperty);
-/*            if(ABMultiValueGetCount(phoneNumbers) > 0)
-            {
-                phone = (__bridge_transfer NSString *)ABMultiValueCopyValueAtIndex(phoneNumbers, 0);
-                NSLog([NSString stringWithFormat:@"phone#: %@", phone] );
-            }
-            else
-            {
-                NSLog(@"[No Phone number found]");
-            }
-  */
-        for (int i=0; i < ABMultiValueGetCount(phoneNumbers); i++) {
-            CFStringRef currentPhoneLabel = ABMultiValueCopyLabelAtIndex(phoneNumbers, i);
-            CFStringRef currentPhoneValue = ABMultiValueCopyValueAtIndex(phoneNumbers, i);
+            for (int i=0; i < ABMultiValueGetCount(phoneNumbers); i++) {
             
-            NSLog(@"[%@] number: %@", currentPhoneLabel, currentPhoneValue);
-            phone = (__bridge NSString *)(currentPhoneValue);
-            if (CFStringCompare(currentPhoneLabel, kABPersonPhoneMobileLabel, 0) == kCFCompareEqualTo) {
-                //            [contactInfoDict setObject:(__bridge NSString *)currentPhoneValue forKey:@"mobileNumber"];
-            }
+            NSString * originalPhoneLabel = (__bridge_transfer NSString *)ABMultiValueCopyLabelAtIndex(phoneNumbers, i);
+            NSString * currentPhoneValue = (__bridge_transfer NSString *)ABMultiValueCopyValueAtIndex(phoneNumbers, i);
+                NSString * currentPhoneLabel = nil;
+            NSString * other =[phonesDictionary valueForKey: currentPhoneLabel];
             
-            if (CFStringCompare(currentPhoneLabel, kABHomeLabel, 0) == kCFCompareEqualTo) {
-                //            [contactInfoDict setObject:(__bridge NSString *)currentPhoneValue forKey:@"homeNumber"];
+            if(other == nil){
+                currentPhoneLabel = [NSString stringWithString:originalPhoneLabel ];
+            }else{
+                currentPhoneLabel = [NSString stringWithFormat:@"%@_%d", originalPhoneLabel, 2];
             }
+            [phonesDictionary setObject: currentPhoneValue forKey:currentPhoneLabel];
             
-            CFRelease(currentPhoneLabel);
-            CFRelease(currentPhoneValue);
-        }
+            }
         CFRelease(phoneNumbers);
         
-        NSString* eMailAddress = nil;
         ABMultiValueRef emailAddresses = ABRecordCopyValue(thisContact, kABPersonEmailProperty);
         for(int i=0; i< ABMultiValueGetCount(emailAddresses); i++){
-            CFStringRef currentEmailLabel = ABMultiValueCopyLabelAtIndex(emailAddresses, i);
+            //CFStringRef currentEmailLabel = ABMultiValueCopyLabelAtIndex(emailAddresses, i);
+            NSString * currentEmailLabel = [NSString stringWithFormat:@"Email%d", i];
             CFStringRef currentEmailValue = ABMultiValueCopyValueAtIndex(emailAddresses, i);
+            [emailsDictionary setObject:(__bridge id)(currentEmailValue) forKey:currentEmailLabel];
             
-            NSLog([NSString stringWithFormat:@"[%@] email: %@", currentEmailLabel, currentEmailValue]);
-            eMailAddress = (__bridge NSString *)(currentEmailValue);
-            CFRelease(currentEmailLabel);
-            CFRelease(currentEmailValue);
+             CFRelease(currentEmailValue);
         }
+            	NSDictionary * contactDict = @{@"Id" : contactId,
+                                          @"First name" : name,
+                                          @"Last name" : lastName,
+                                          @"Phones": phonesDictionary,
+                                          @"Emails":emailsDictionary};
+            
+          [contactsArray addObject:contactDict];
+            if( j%30 == 0 )
+            {
+                [self handleContactsArray:contactsArray ];
+                [contactsArray removeAllObjects];
+            }
+        
+          }
+        if([contactsArray count] > 0)
+        {
+            [self handleContactsArray:contactsArray ];
+            [contactsArray removeAllObjects];
         }
         
-        }
-    
+    }
 }
+
+- (void) handleContactsArray:(NSMutableArray *)contactsArray{
+    NSDictionary *dict = @{@"contacts" : contactsArray};
+    NSString *result = [self serializeObjectDictionary:dict];
+    NSLog(@"JSON:\n%@", result);
+}
+
+- (NSString *)serializeObjectDictionary:(NSDictionary *)dict {
+    NSError *error = nil;
+    NSData *json;
+    NSString *jsonString = nil;
+    // Dictionary convertable to JSON ?
+    if ([NSJSONSerialization isValidJSONObject:dict])
+    {
+        // Serialize the dictionary
+        json = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
+        
+        // If no errors, let's view the JSON
+        if (json != nil && error == nil)
+        {
+            jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
+        }
+        else{
+            jsonString = @"{\"error\": \"invalid object\"}";
+        }
+    }
+    return jsonString;
+}
+
 
 @end
