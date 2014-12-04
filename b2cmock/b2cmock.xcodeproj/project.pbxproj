@@ -14,6 +14,9 @@
 		817095121A2D04B7005CE44F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817095111A2D04B7005CE44F /* Images.xcassets */; };
 		817095151A2D04B7005CE44F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817095131A2D04B7005CE44F /* LaunchScreen.xib */; };
 		817095211A2D04B7005CE44F /* b2cmockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 817095201A2D04B7005CE44F /* b2cmockTests.m */; };
+		8170952C1A2F789D005CE44F /* ActionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8170952B1A2F789D005CE44F /* ActionsTableViewController.m */; };
+		8170952E1A2F7980005CE44F /* ConnAction.h in Sources */ = {isa = PBXBuildFile; fileRef = 8170952D1A2F7980005CE44F /* ConnAction.h */; };
+		81E66DD21A30530600C571F8 /* ConnAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E66DD11A30530600C571F8 /* ConnAction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 		8170951A1A2D04B7005CE44F /* b2cmockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = b2cmockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8170951F1A2D04B7005CE44F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		817095201A2D04B7005CE44F /* b2cmockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = b2cmockTests.m; sourceTree = "<group>"; };
+		8170952A1A2F789D005CE44F /* ActionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionsTableViewController.h; sourceTree = "<group>"; };
+		8170952B1A2F789D005CE44F /* ActionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionsTableViewController.m; sourceTree = "<group>"; };
+		8170952D1A2F7980005CE44F /* ConnAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnAction.h; sourceTree = "<group>"; };
+		81E66DD11A30530600C571F8 /* ConnAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnAction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +93,10 @@
 				8170950B1A2D04B7005CE44F /* ViewController.h */,
 				8170950C1A2D04B7005CE44F /* ViewController.m */,
 				8170950E1A2D04B7005CE44F /* Main.storyboard */,
+				8170952A1A2F789D005CE44F /* ActionsTableViewController.h */,
+				8170952B1A2F789D005CE44F /* ActionsTableViewController.m */,
+				8170952D1A2F7980005CE44F /* ConnAction.h */,
+				81E66DD11A30530600C571F8 /* ConnAction.m */,
 				817095111A2D04B7005CE44F /* Images.xcassets */,
 				817095131A2D04B7005CE44F /* LaunchScreen.xib */,
 				817095041A2D04B7005CE44F /* Supporting Files */,
@@ -222,6 +233,9 @@
 				8170950D1A2D04B7005CE44F /* ViewController.m in Sources */,
 				8170950A1A2D04B7005CE44F /* AppDelegate.m in Sources */,
 				817095071A2D04B7005CE44F /* main.m in Sources */,
+				8170952E1A2F7980005CE44F /* ConnAction.h in Sources */,
+				8170952C1A2F789D005CE44F /* ActionsTableViewController.m in Sources */,
+				81E66DD21A30530600C571F8 /* ConnAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +426,7 @@
 				817095261A2D04B7005CE44F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		817095271A2D04B7005CE44F /* Build configuration list for PBXNativeTarget "b2cmockTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +435,7 @@
 				817095291A2D04B7005CE44F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

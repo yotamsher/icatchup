@@ -7,16 +7,57 @@
 //
 
 #import "AppDelegate.h"
+#import "ConnAction.h"
+#import "ActionsTableViewController.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
-
+{
+    NSMutableArray * _acions;
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    _acions = [NSMutableArray arrayWithCapacity:20];
+    
+    ConnAction *connAction = [[ConnAction alloc] init];
+    connAction.title = @"Find a job as CTO";
+    connAction.type = @"jobSeek";
+    connAction.results = 3;
+    [_acions addObject:connAction];
+    
+    connAction = [[ConnAction alloc] init];
+    connAction.title = @"Find a job as VP R&D";
+    connAction.type = @"jobSeek";
+    connAction.results = 2;
+    [_acions addObject:connAction];
+     
+    connAction = [[ConnAction alloc] init];
+    connAction.title = @"Sell a 2003 Mazda 3";
+    connAction.type = @"carSell";
+    connAction.results = 17;
+    [_acions addObject:connAction];
+
+    connAction = [[ConnAction alloc] init];
+    connAction.title = @"Buy a job as CTO";
+    connAction.type = @"jobSeek";
+    connAction.results = 5;
+    [_acions addObject:connAction];
+
+    connAction = [[ConnAction alloc] init];
+    connAction.title = @"Buy a new car";
+    connAction.type = @"carBuy";
+    connAction.results = 5;
+    [_acions addObject:connAction];
+    
+    UIViewController *homeController = (UIViewController *)self.window.rootViewController;
+    UIStoryboard *stb = homeController.storyboard;
+    ActionsTableViewController *actionsViewController = [stb instantiateViewControllerWithIdentifier:@"ActionsTableViewController"];
+
+    actionsViewController.actions = _acions;
+
+    
     return YES;
 }
 

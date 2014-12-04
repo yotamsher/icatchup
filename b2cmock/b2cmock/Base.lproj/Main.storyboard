@@ -11,6 +11,18 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="stg-YD-Gj6">
+                                <rect key="frame" x="145" y="379" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cSk-eN-eGe" kind="modal" id="hOg-Yu-yk6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -18,19 +30,33 @@
             </objects>
             <point key="canvasLocation" x="130.66666666666666" y="284.94666666666666"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Active actions-->
         <scene sceneID="6jp-pO-m8Z">
             <objects>
-                <tableViewController id="TUy-L7-V2t" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ActionsTableViewController" id="TUy-L7-V2t" customClass="ActionsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qcz-hu-p5c">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Qrq-FS-O1R">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ActionCell" textLabel="GSU-XC-o46" detailTextLabel="nPN-Mj-brt" style="IBUITableViewCellStyleSubtitle" id="Qrq-FS-O1R">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qrq-FS-O1R" id="gAr-yI-g5D">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GSU-XC-o46">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nPN-Mj-brt">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -39,7 +65,7 @@
                             <outlet property="delegate" destination="TUy-L7-V2t" id="5uZ-hp-Nus"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="a8I-2I-kh1"/>
+                    <navigationItem key="navigationItem" title="Active actions" id="a8I-2I-kh1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMg-9r-rZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,9 +76,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cSk-eN-eGe" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ifV-5S-L93"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pw0-oI-h11">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.88665990702142006" blue="0.152838390668665" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
