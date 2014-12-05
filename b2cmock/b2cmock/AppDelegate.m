@@ -25,30 +25,35 @@
     connAction.title = @"Find a job as CTO";
     connAction.type = @"jobSeek";
     connAction.results = 3;
+    connAction.color = 1;
     [_acions addObject:connAction];
     
     connAction = [[ConnAction alloc] init];
     connAction.title = @"Find a job as VP R&D";
     connAction.type = @"jobSeek";
     connAction.results = 2;
+    connAction.color = 2;
     [_acions addObject:connAction];
      
     connAction = [[ConnAction alloc] init];
     connAction.title = @"Sell a 2003 Mazda 3";
     connAction.type = @"carSell";
     connAction.results = 17;
+    connAction.color = 3;
     [_acions addObject:connAction];
 
     connAction = [[ConnAction alloc] init];
     connAction.title = @"Buy a job as CTO";
     connAction.type = @"jobSeek";
     connAction.results = 5;
+    connAction.color = 4;
     [_acions addObject:connAction];
 
     connAction = [[ConnAction alloc] init];
     connAction.title = @"Buy a new car";
     connAction.type = @"carBuy";
     connAction.results = 5;
+    connAction.color = 5;
     [_acions addObject:connAction];
     
     UIViewController *homeController = (UIViewController *)self.window.rootViewController;

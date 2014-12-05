@@ -10,8 +10,9 @@
 
 @interface ConnAction : NSObject
 
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *type;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *type;
 @property (nonatomic, assign) int results;
+@property (nonatomic, assign) int color;
 
 @end

@@ -17,6 +17,7 @@
 		8170952C1A2F789D005CE44F /* ActionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8170952B1A2F789D005CE44F /* ActionsTableViewController.m */; };
 		8170952E1A2F7980005CE44F /* ConnAction.h in Sources */ = {isa = PBXBuildFile; fileRef = 8170952D1A2F7980005CE44F /* ConnAction.h */; };
 		81E66DD21A30530600C571F8 /* ConnAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E66DD11A30530600C571F8 /* ConnAction.m */; };
+		81E66DD51A31E64F00C571F8 /* ConnActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E66DD41A31E64F00C571F8 /* ConnActionCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		8170952B1A2F789D005CE44F /* ActionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionsTableViewController.m; sourceTree = "<group>"; };
 		8170952D1A2F7980005CE44F /* ConnAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnAction.h; sourceTree = "<group>"; };
 		81E66DD11A30530600C571F8 /* ConnAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnAction.m; sourceTree = "<group>"; };
+		81E66DD31A31E64F00C571F8 /* ConnActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnActionCell.h; sourceTree = "<group>"; };
+		81E66DD41A31E64F00C571F8 /* ConnActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnActionCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				8170950B1A2D04B7005CE44F /* ViewController.h */,
 				8170950C1A2D04B7005CE44F /* ViewController.m */,
 				8170950E1A2D04B7005CE44F /* Main.storyboard */,
+				81E66DD31A31E64F00C571F8 /* ConnActionCell.h */,
+				81E66DD41A31E64F00C571F8 /* ConnActionCell.m */,
 				8170952A1A2F789D005CE44F /* ActionsTableViewController.h */,
 				8170952B1A2F789D005CE44F /* ActionsTableViewController.m */,
 				8170952D1A2F7980005CE44F /* ConnAction.h */,
@@ -232,6 +237,7 @@
 			files = (
 				8170950D1A2D04B7005CE44F /* ViewController.m in Sources */,
 				8170950A1A2D04B7005CE44F /* AppDelegate.m in Sources */,
+				81E66DD51A31E64F00C571F8 /* ConnActionCell.m in Sources */,
 				817095071A2D04B7005CE44F /* main.m in Sources */,
 				8170952E1A2F7980005CE44F /* ConnAction.h in Sources */,
 				8170952C1A2F789D005CE44F /* ActionsTableViewController.m in Sources */,
