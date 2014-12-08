@@ -9,6 +9,7 @@
 #import "ActionsTableViewController.h"
 #import "ConnAction.h"
 #import "ConnActionCell.h"
+#import "NewActionViewController.h"
 
 @interface ActionsTableViewController ()
 
@@ -62,6 +63,21 @@
     return cell;
 }
 
+#pragma mark - PlayerDetailsViewControllerDelegate
+
+- (void)NewActionViewControllerDidCancel:(NewActionViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+}
+
+- (void)NewActionViewControllerDidSave:(NewActionViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -97,15 +113,18 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+    if ([segue.identifier isEqualToString:@"AddConnAction"]) {
+        
+        UINavigationController *navigationController = segue.destinationViewController;
+        NewActionViewController *newActionViewController = [navigationController viewControllers][0];
+        newActionViewController.delegate = self;
+    }}
+
 
 static id s_singleton = nil;
 + (id) alloc {

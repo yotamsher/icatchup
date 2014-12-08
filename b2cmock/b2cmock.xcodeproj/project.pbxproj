@@ -18,6 +18,9 @@
 		8170952E1A2F7980005CE44F /* ConnAction.h in Sources */ = {isa = PBXBuildFile; fileRef = 8170952D1A2F7980005CE44F /* ConnAction.h */; };
 		81E66DD21A30530600C571F8 /* ConnAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E66DD11A30530600C571F8 /* ConnAction.m */; };
 		81E66DD51A31E64F00C571F8 /* ConnActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E66DD41A31E64F00C571F8 /* ConnActionCell.m */; };
+		81E66DD71A34F7C400C571F8 /* operator.png in Resources */ = {isa = PBXBuildFile; fileRef = 81E66DD61A34F7C300C571F8 /* operator.png */; };
+		81E66DD91A34FB7200C571F8 /* facebook_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 81E66DD81A34FB7200C571F8 /* facebook_button.png */; };
+		81E66DDC1A3504B400C571F8 /* NewActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E66DDB1A3504B400C571F8 /* NewActionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,10 @@
 		81E66DD11A30530600C571F8 /* ConnAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnAction.m; sourceTree = "<group>"; };
 		81E66DD31A31E64F00C571F8 /* ConnActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnActionCell.h; sourceTree = "<group>"; };
 		81E66DD41A31E64F00C571F8 /* ConnActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnActionCell.m; sourceTree = "<group>"; };
+		81E66DD61A34F7C300C571F8 /* operator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = operator.png; sourceTree = "<group>"; };
+		81E66DD81A34FB7200C571F8 /* facebook_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_button.png; sourceTree = "<group>"; };
+		81E66DDA1A3504B400C571F8 /* NewActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewActionViewController.h; sourceTree = "<group>"; };
+		81E66DDB1A3504B400C571F8 /* NewActionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewActionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +98,8 @@
 		817095031A2D04B7005CE44F /* b2cmock */ = {
 			isa = PBXGroup;
 			children = (
+				81E66DD81A34FB7200C571F8 /* facebook_button.png */,
+				81E66DD61A34F7C300C571F8 /* operator.png */,
 				817095081A2D04B7005CE44F /* AppDelegate.h */,
 				817095091A2D04B7005CE44F /* AppDelegate.m */,
 				8170950B1A2D04B7005CE44F /* ViewController.h */,
@@ -105,6 +114,8 @@
 				817095111A2D04B7005CE44F /* Images.xcassets */,
 				817095131A2D04B7005CE44F /* LaunchScreen.xib */,
 				817095041A2D04B7005CE44F /* Supporting Files */,
+				81E66DDA1A3504B400C571F8 /* NewActionViewController.h */,
+				81E66DDB1A3504B400C571F8 /* NewActionViewController.m */,
 			);
 			path = b2cmock;
 			sourceTree = "<group>";
@@ -215,9 +226,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E66DD91A34FB7200C571F8 /* facebook_button.png in Resources */,
 				817095101A2D04B7005CE44F /* Main.storyboard in Resources */,
 				817095151A2D04B7005CE44F /* LaunchScreen.xib in Resources */,
 				817095121A2D04B7005CE44F /* Images.xcassets in Resources */,
+				81E66DD71A34F7C400C571F8 /* operator.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +251,7 @@
 				8170950D1A2D04B7005CE44F /* ViewController.m in Sources */,
 				8170950A1A2D04B7005CE44F /* AppDelegate.m in Sources */,
 				81E66DD51A31E64F00C571F8 /* ConnActionCell.m in Sources */,
+				81E66DDC1A3504B400C571F8 /* NewActionViewController.m in Sources */,
 				817095071A2D04B7005CE44F /* main.m in Sources */,
 				8170952E1A2F7980005CE44F /* ConnAction.h in Sources */,
 				8170952C1A2F789D005CE44F /* ActionsTableViewController.m in Sources */,

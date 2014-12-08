@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewActionViewController.h"
 
-@interface ActionsTableViewController : UITableViewController
+@interface ActionsTableViewController : UITableViewController<NewActionViewControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray * actions;
 
