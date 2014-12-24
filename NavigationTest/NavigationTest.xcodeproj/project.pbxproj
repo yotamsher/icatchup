@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8124D3D31A4B69AE00B642F1 /* PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8124D3D21A4B69AE00B642F1 /* PopupViewController.m */; };
 		8155CB521A4756D8004439E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8155CB511A4756D8004439E9 /* main.m */; };
 		8155CB551A4756D8004439E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8155CB541A4756D8004439E9 /* AppDelegate.m */; };
 		8155CB581A4756D8004439E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8155CB571A4756D8004439E9 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8124D3D11A4B69AE00B642F1 /* PopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupViewController.h; sourceTree = "<group>"; };
+		8124D3D21A4B69AE00B642F1 /* PopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupViewController.m; sourceTree = "<group>"; };
 		8155CB4C1A4756D8004439E9 /* NavigationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8155CB501A4756D8004439E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8155CB511A4756D8004439E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				8155CB5C1A4756D8004439E9 /* Images.xcassets */,
 				8155CB5E1A4756D8004439E9 /* LaunchScreen.xib */,
 				8155CB4F1A4756D8004439E9 /* Supporting Files */,
+				8124D3D11A4B69AE00B642F1 /* PopupViewController.h */,
+				8124D3D21A4B69AE00B642F1 /* PopupViewController.m */,
 			);
 			path = NavigationTest;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				8155CB581A4756D8004439E9 /* ViewController.m in Sources */,
 				8155CB551A4756D8004439E9 /* AppDelegate.m in Sources */,
 				8155CB521A4756D8004439E9 /* main.m in Sources */,
+				8124D3D31A4B69AE00B642F1 /* PopupViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
