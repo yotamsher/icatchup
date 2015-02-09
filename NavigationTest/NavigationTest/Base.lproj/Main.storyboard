@@ -38,7 +38,7 @@
         <!--bb-->
         <scene sceneID="yrH-uu-tQr">
             <objects>
-                <viewController id="Uhc-u1-HbH" sceneMemberID="viewController">
+                <viewController id="Uhc-u1-HbH" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WOg-Wl-C6E"/>
                         <viewControllerLayoutGuide type="bottom" id="LZm-qc-51J"/>
@@ -61,14 +61,17 @@
                                 <state key="normal" title="DD">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="D2v-8L-5vJ" kind="modal" id="keK-D4-ty5"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="bb" id="oxA-R3-8zM"/>
+                    <navigationItem key="navigationItem" title="bb" id="oxA-R3-8zM">
+                        <barButtonItem key="rightBarButtonItem" title="New" id="C3U-fl-Pg2">
+                            <connections>
+                                <segue destination="D2v-8L-5vJ" kind="modal" id="H9j-kN-6Z0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHi-nS-Zao" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,7 +110,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nV5-GR-5go">
                                 <rect key="frame" x="10" y="20" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Close">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -125,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Jv-IR-Ciw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="929"/>
+            <point key="canvasLocation" x="1604" y="1007"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xxP-5j-9LD">
